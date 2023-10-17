@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TimBet</title>
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet header" href="CSS/header.css">
+    <link rel="stylesheet header" href="CSS/above-footer.css">
+    <link rel="stylesheet header" href="CSS/table.css">
+    <link rel="stylesheet header" href="CSS/sidebar.css">
+    <link rel="stylesheet header" href="CSS/content.css">
+    <link rel="stylesheet footer" href="CSS/footer.css">
+    <link rel="stylesheet table" href="CSS/navigation.css">
+    <link rel="stylesheet index" href="CSS/main.css">
+</head>
+    <body>
+    <?php
+    include php/check.php
+    include php/add_in_table.php
+    include php/clear_table.php
+    include php/load.php
+    ?>
+    <div id="container">
+        <div class="header">
+            <a href="https://github.com/sleeter" target="_blank"><img alt="Логотип" src="logo.png"></a>
+            <div>
+                <span>
+                    <a href="https://t.me/sleeter" target="_blank">Бадамханов Тимур P3207</a>
+                </span>
+                <span>
+                    <a href="https://se.ifmo.ru/courses/web" target="_blank">Вариант 1703</a>
+                </span>
+            </div>
+        </div>
+        <div class="navigation">
+            <p>Добро пожаловать на сайт 1TimBet</p>
+        </div>
+        <div class="sidebar">
+            <tr class="graph-data">
+                <td>
+                    <svg height="400" width="400" xmlns="http://www.w3.org/2000/svg">
+                        <image xlink:href="area.jpg" width="300" height="300" opacity="0.6" x="50" y="50"/>
+                        <line stroke="white" x1="50" x2="350" y1="200" y2="200"></line> <!-- axis x -->
+                        <line stroke="white" x1="200" x2="200" y1="50" y2="350"></line> <!-- axis y -->
+                        <polygon fill="white" points="200,35 194,50 206,50" stroke="white"></polygon> <!-- arrow y -->
+                        <polygon fill="white" points="365,200 350,194 350,206" stroke="white"></polygon> <!-- arrow x -->
+
+                        <!-- lines on axis x -->
+                        <line stroke="white" x1="300" x2="300" y1="205" y2="195"></line>
+                        <line stroke="white" x1="250" x2="250" y1="205" y2="195"></line>
+                        <line stroke="white" x1="150" x2="150" y1="205" y2="195"></line>
+                        <line stroke="white" x1="100" x2="100" y1="205" y2="195"></line>
+
+                        <!-- lines on axis y -->
+                        <line stroke="white" x1="205" x2="195" y1="100" y2="100"></line>
+                        <line stroke="white" x1="205" x2="195" y1="150" y2="150"></line>
+                        <line stroke="white" x1="205" x2="195" y1="300" y2="300"></line>
+                        <line stroke="white" x1="205" x2="195" y1="250" y2="250"></line>
+
+                        <!-- Rs and name of axis X, Y -->
+                        <text fill="white" x="240" y="220">R/2</text>
+                        <text fill="white" x="296" y="220">R</text>
+
+                        <text fill="white" x="91" y="220">-R</text>
+                        <text fill="white" x="135" y="220">-R/2</text>
+
+                        <text fill="white" x="180" y="105">R</text>
+                        <text fill="white" x="170" y="155">R/2</text>
+
+                        <text fill="white" x="165" y="254">-R/2</text>
+                        <text fill="white" x="175" y="305">-R</text>
+
+                        <text fill="white" x="350" y="220">X</text>
+                        <text fill="white" x="180" y="50">Y</text>
+
+                        <!-- dot -->
+                        <circle id="point" r="3" cx="200" cy="200" fill="blue" stroke="blue"/>
+                    </svg>
+                </td>
+            </tr>
+        </div>
+        <div class="content">
+            <table class="all-tables">
+                <tr>
+                <td>
+                    <form id="coordinates-form">
+                        <div class="x-buttons">
+                            <div class="x-b">X:</div>
+                            <label>
+                                <button id="-3" class="x-button" type="button" name="x" data-value="-3" onclick="changeButtonBackGround('-3')">-3</button>
+                            </label>
+                            <label>
+                                <button id="-2" class="x-button" type="button" name="x" data-value="-2" onclick="changeButtonBackGround('-2')">-2</button>
+                            </label>
+                            <label>
+                                <button id="-1" class="x-button" type="button" name="x" data-value="-1" onclick="changeButtonBackGround('-1')">-1</button>
+                            </label>
+                            <label>
+                                <button id="0" class="x-button" type="button" name="x" data-value="0" onclick="changeButtonBackGround('0')">0</button>
+                            </label>
+                            <label>
+                                <button id="1" class="x-button" type="button" name="x" data-value="1" onclick="changeButtonBackGround('1')">1</button>
+                            </label>
+                            <label>
+                                <button id="2" class="x-button" type="button" name="x" data-value="2" onclick="changeButtonBackGround('2')">2</button>
+                            </label>
+                            <label>
+                                <button id="3" class="x-button" type="button" name="x" data-value="3" onclick="changeButtonBackGround('3')">3</button>
+                            </label>
+                            <label>
+                                <button id="4" class="x-button" type="button" name="x" data-value="4" onclick="changeButtonBackGround('4')">4</button>
+                            </label>
+                            <label>
+                                <button id="5" class="x-button" type="button" name="x" data-value="5" onclick="changeButtonBackGround('5')">5</button>
+                            </label>
+                        </div>
+                        <div class="Y-text" id="Y">
+                            <label>
+                                Y:
+                                <input id="Y-text" class="Y-text-input" type="text" name="y" placeholder="(-5; 5)" maxlength="14" required/>
+                            </label>
+                        </div>
+
+                        <div class="R-radio" id="R">
+                            R:
+                            <label>
+                                <input type="radio" name="r" value="1" required>1
+                            </label>
+                            <label>
+                                <input type="radio" name="r" value="1.5" required>1.5
+                            </label>
+                            <label>
+                                <input type="radio" name="r" value="2" required>2
+                            </label>
+                            <label>
+                                <input type="radio" name="r" value="2.5" required>2.5
+                            </label>
+                            <label>
+                                <input type="radio" name="r" value="3" required>3
+                            </label>
+                        </div>
+                        <button class="other-button" id="submit-button" type="submit">Отправить</button>
+                        <button class="other-button" id="clear-button" type="reset">Очистить таблицу</button>
+                    </form>
+                </td>
+            </tr>
+            </table>
+        </div>
+        <div class="above-footer">
+            <!-- check table -->
+            <table id="check" class="table-check">
+                <tr class="table-header">
+                    <th scope="col">X</th>
+                    <th scope="col">Y</th>
+                    <th scope="col">R</th>
+                    <th scope="col">Текущее время</th>
+                    <th scope="col">Время исполнения</th>
+                    <th scope="col">Результат попадания</th>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+            <small>
+                Проект доступен с открытым исходным кодом на условиях Лицензии CC BY-NC-SA 4.0. Авторские права 2023 Бадамханов Тимур
+            </small>
+        </div>
+    </div>
+    <script type="text/javascript" src="JS_script/script.js"></script>
+    <script type="text/javascript" src="JS_script/jquery.js"></script>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+.sidebar {
+    float: left;
+    width: 30%;
+    height: 400px;
+    background-color: black;
+    border-bottom: 1px solid limegreen;
+
+}

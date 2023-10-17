@@ -1,0 +1,50 @@
+* {
+    font-family: Calibri, sans-serif;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    font-family: cursive, sans-serif;
+}
+
+.header > a, img {
+    width: 75px;
+    margin-top: 1%;
+    margin-left: 1%;
+    border-radius: 50%;
+}
+
+img:hover {
+    transition: 0.5s;
+    border-radius: 40%;
+    border: 1px solid lime;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 2px limegreen;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    margin: 1.7% 1% auto;
+    flex-direction: column;
+}
+a:hover {
+    color: lime;
+    transition: 0.5s;
+    text-shadow: 0 0 20px limegreen;
+}
+
+.header span, a{
+    margin-top: 1%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    font-family: cursive, sans-serif;
+}
+
+

@@ -1,0 +1,78 @@
+.all-tables {
+    padding: 40px;
+    border-radius: 10%;
+    display: table;
+    text-align: center;
+    box-shadow: 0 0 30px 0 white;
+    margin: 75px auto auto;
+    background-color: white;
+}
+.table-check {
+    color: white;
+    width: 80%;
+    margin: 20px auto;
+    border-left: 1px solid limegreen;
+    border-bottom: 1px solid limegreen;
+    border-right: 1px solid limegreen;
+    background-color: black;
+    /*box-shadow: 0 0 30px 0 limegreen;*/
+}
+
+.x-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+.x-buttons button {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+}
+.x-buttons button:active {
+    border: 1px solid black;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
+}
+.x-buttons button:hover {
+    background-color: lightgray;
+}
+/*.x-buttons button:focus {*/
+/*    border: 2px solid limegreen;*/
+/*}*/
+.X-text {
+    color: white;
+    margin-top: 20px;
+}
+.x-b {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    padding: 0px 0px;
+    font-size: 16px;
+}
+.Y-text {
+    color: black;
+    margin-top: 20px;
+}
+.R-radio {
+    margin-top: 20px;
+    color: black;
+}
+
+.R-radio label {
+    margin-right: 10px;
+}
+.R-radio-input {
+    border: 1px solid black;
+}
+.other-button {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#coordinates-form label > input{
+    margin: 5px;
+    text-align: center;
+}

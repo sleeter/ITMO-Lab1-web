@@ -1,0 +1,15 @@
+.navigation {
+    height: 70px;
+    display: flex;
+    background-color: black;
+    border-top: 1px solid limegreen;
+    border-bottom: 1px solid limegreen;
+
+}
+.navigation > p {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}

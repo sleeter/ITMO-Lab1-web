@@ -1,0 +1,7 @@
+.content {
+    float: right;
+    width: 70%;
+    height: 400px;
+    background-color: black;
+    border-bottom: 1px solid limegreen;
+}
